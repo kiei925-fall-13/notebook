@@ -1,0 +1,16 @@
+<ul>
+  <% @notes.each do |note| %>
+    <li>
+      <%= note.content %>
+      <div>
+        <%= link_to '<i class="icon-edit"></i>'.html_safe, edit_note_url(note.id) %>
+        <%= link_to '<i class="icon-trash"></i>'.html_safe, note_url(note.id), :method => 'delete' %>
+      </div>
+    </li>
+  <% end %>
+  <li>
+    <%= form_tag notes_url, :method => "post", :id => "new_note" do %>
+      <%= text_field_tag :content, nil, :placeholder => "Add a new aha! here", :size => 50, :id => "note_content" %>
+    <% end %>
+  </li>
+</ul>

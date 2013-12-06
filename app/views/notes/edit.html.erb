@@ -1,0 +1,12 @@
+<h1>Editing Note #<%= @note.id %></h1>
+
+<%= form_tag(note_url(@note), method: 'patch') do %>
+  <div>
+    <%= label_tag :content %><br />
+    <%= text_field_tag :content, @note.content %>
+  </div>
+
+  <div>
+    <%= submit_tag "Update Note" %>
+  </div>
+<% end %>
