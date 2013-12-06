@@ -9,6 +9,8 @@ group :test, :development do
   gem 'selenium-webdriver'
 end
 
+gem 'starter_generators'
+
 gem 'font-awesome-rails'
 
 # Use sqlite3 as the database for Active Record
